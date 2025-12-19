@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NextHome - Inicio</title>
+
+    <!-- Google Fonts: Poppins (títulos) + Inter (texto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/index.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Ir a Inicio">
+          <span class="brand__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 10.5L12 3l9 7.5"
+                stroke="#2F80ED"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M5 9.8V21h14V9.8"
+                stroke="#2F80ED"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span class="brand__name">NextHome</span>
+        </a>
+
+        <button
+          class="nav-toggle js-nav-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <nav class="nav js-nav" aria-label="Menú principal">
+          <a class="nav__link is-active" href="index.html">Inicio</a>
+          <a class="nav__link" href="catalogo-vivienda.html">Viviendas</a>
+          <a class="nav__link" href="compra-reserva.html">Comprar</a>
+          <a class="nav__link" href="sobre-nosotros.html">Sobre nosotros</a>
+          <a class="nav__link" href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero__inner">
+          <h1 class="hero__title">
+            Encuentra tu próxima<br />vivienda con NextHome
+          </h1>
+          <p class="hero__subtitle">
+            Compra o alquila viviendas de forma sencilla y segura
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn-primary" href="catalogo-vivienda.html"
+              >Ver viviendas</a
+            >
+          </div>
+
+          <!-- BUSCADOR -->
+          <form class="search" id="searchForm" autocomplete="off">
+            <div class="search__inner">
+              <label class="sr-only" for="ubicacion">Ubicación</label>
+              <select id="ubicacion" name="ubicacion" class="control">
+                <option value="">Ubicación</option>
+                <option value="gijon">Gijón</option>
+                <option value="oviedo">Oviedo</option>
+                <option value="aviles">Avilés</option>
+              </select>
+
+              <label class="sr-only" for="tipo">Tipo</label>
+              <select id="tipo" name="tipo" class="control">
+                <option value="">Tipo</option>
+                <option value="piso">Piso</option>
+                <option value="casa">Casa</option>
+                <option value="atico">Ático</option>
+              </select>
+
+              <label class="sr-only" for="precioMax">Precio máximo</label>
+              <input
+                id="precioMax"
+                name="precioMax"
+                class="control"
+                type="number"
+                min="0"
+                placeholder="Precio máx"
+              />
+
+              <button class="btn btn-primary" type="submit">Buscar</button>
+            </div>
+
+            <p class="msg" id="searchMsg" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <!-- VIVIENDAS DESTACADAS -->
+      <section class="section" aria-labelledby="destacadasTitle">
+        <div class="container">
+          <h2 id="destacadasTitle" class="section__title">
+            Viviendas destacadas
+          </h2>
+
+          <div class="grid grid--3">
+            <article class="property-card">
+              <div
+                class="property-card__img"
+                aria-label="Imagen vivienda"
+              ></div>
+              <div class="property-card__body">
+                <p class="property-card__price">Precio</p>
+                <p class="property-card__meta">
+                  <span class="meta__label">Ubicación</span>
+                  <span class="line line--mid"></span>
+                </p>
+                <a
+                  class="btn btn-primary btn-small"
+                  href="detalles-vivienda.html?id=1"
+                  >Ver vivienda</a
+                >
+              </div>
+            </article>
+
+            <article class="property-card">
+              <div
+                class="property-card__img"
+                aria-label="Imagen vivienda"
+              ></div>
+              <div class="property-card__body">
+                <p class="property-card__price">Precio</p>
+                <p class="property-card__meta">
+                  <span class="meta__label">Ubicación</span>
+                  <span class="line line--mid"></span>
+                </p>
+                <a
+                  class="btn btn-primary btn-small"
+                  href="detalles-vivienda.html?id=2"
+                  >Ver vivienda</a
+                >
+              </div>
+            </article>
+
+            <article class="property-card">
+              <div
+                class="property-card__img"
+                aria-label="Imagen vivienda"
+              ></div>
+              <div class="property-card__body">
+                <p class="property-card__price">Precio</p>
+                <p class="property-card__meta">
+                  <span class="meta__label">Datos</span>
+                  <span class="line line--mid"></span>
+                </p>
+                <a
+                  class="btn btn-primary btn-small"
+                  href="detalles-vivienda.html?id=3"
+                  >Ver vivienda</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- POR QUÉ ELEGIR -->
+      <section class="section section--soft" aria-labelledby="whyTitle">
+        <div class="container">
+          <h2 id="whyTitle" class="section__title">
+            ¿Por qué elegir NextHome?
+          </h2>
+
+          <div class="why">
+            <article class="why__item">
+              <div class="why__icon" aria-hidden="true"></div>
+              <div class="why__text">
+                <span class="line line--long"></span>
+                <span class="line line--mid"></span>
+              </div>
+            </article>
+
+            <article class="why__item">
+              <div class="why__icon" aria-hidden="true"></div>
+              <div class="why__text">
+                <span class="line line--long"></span>
+                <span class="line line--mid"></span>
+              </div>
+            </article>
+
+            <article class="why__item">
+              <div class="why__icon" aria-hidden="true"></div>
+              <div class="why__text">
+                <span class="line line--long"></span>
+                <span class="line line--mid"></span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTA -->
+      <section class="section contact-cta">
+        <div class="container contact-cta__inner">
+          <h2 class="section__title">Contacta con nosotros</h2>
+          <a class="btn btn-primary" href="contacto.html"
+            >Contacta con nosotros</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER (centrado siempre) -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <span class="footer__icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 10.5L12 3l9 7.5"
+                stroke="#2F80ED"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M5 9.8V21h14V9.8"
+                stroke="#2F80ED"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span class="footer__name">NextHome</span>
+        </div>
+
+        <nav class="footer__nav" aria-label="Enlaces del pie">
+          <a href="index.html">Inicio</a>
+          <a href="catalogo-vivienda.html">Viviendas</a>
+          <a href="contacto.html">Contacto</a>
+          <a href="aviso-legal.html">Aviso legal</a>
+          <a href="politica-privacidad.html">Política de privacidad</a>
+        </nav>
+      </div>
+
+      <div class="container footer__bottom">
+        <p>© 2025 NextHome. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
